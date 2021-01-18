@@ -102,7 +102,7 @@ target_test = tags_encoded[499000:]
 
  #%%
 
-from tensorflow.keras.preprocessing import text
+
 
 VOCAB_SIZE = 100
 
