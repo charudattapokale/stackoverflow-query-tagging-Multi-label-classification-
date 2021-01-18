@@ -1,0 +1,18 @@
+SELECT 
+  LOWER(CONCAT(title," ", REGEXP_REPLACE(body, r"<[^>]*>", "" ))),
+  REPLACE (tags,"|",",") AS tags
+FROM
+  `bigquery-public-data.stackoverflow.posts_questions`
+WHERE REGEXP_CONTAINS(
+  tags,
+  r"(?:tensorflow|keras|pandas|matplotlib|sckit-learn|css|c++)"
+ )
+
+
+
+SELECT 
+  REGEXP_REPLACE(
+    text,
+    r"(?:tensorflow|keras|pandas|matplotlib|sckit-learn|css|c++)","XXXX"
+  
+  )
