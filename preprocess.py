@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.utils import shuffle
 from sklearn.preprocessing import MultiLabelBinarizer
 from tensorflow.keras.preprocessing import text
+from sklearn.preprocessing import MultiLabelBinarizer
 
 
 raw_data = pd.read_csv("./2/stack_data_final.csv")
@@ -85,7 +86,7 @@ cnt = 0
         
 #%%
 
-from sklearn.preprocessing import MultiLabelBinarizer
+
 
 tag_encoder = MultiLabelBinarizer()
 tags_encoded = tag_encoder.fit_transform(data_keeplist['label'])
